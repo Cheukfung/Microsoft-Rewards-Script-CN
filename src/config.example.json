@@ -6,8 +6,8 @@
     "clusters": 1,
     "errorDiagnostics": true,
     "saveFingerprint": {
-        "mobile": false,
-        "desktop": false
+        "mobile": true,
+        "desktop": true
     },
     "workers": {
         "doDailySet": true,
