@@ -155,6 +155,10 @@
   - 入口：`scripts/docker/entrypoint.sh:1`
   - 每日任务：`scripts/docker/run_daily.sh:146`
 
+### ⚠️ Synology 群晖 提示
+- Container Manager 不支持 `cpus` 资源限制，请在 `compose.yaml` 注释或移除 `cpus: 2`（见 `compose.yaml:29`）。
+- 群晖 Container Manager 不支持 BuildKit 变量自动处理，首次构建运行请在终端执行：`DOCKER_BUILDKIT=1 sudo docker compose up -d`
+
 ## 🧪 工作原理速览
 - 主入口：`src/index.ts:1`
   - 加载配置与账户：`src/util/Load.ts:11`
